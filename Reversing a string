@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+string solve(int i, string s) {
+  int n = s.size();
+  if(i >= n/2) { 
+    return s;
+  }
+  swap(s[i],s[n-i-1]);
+  return solve(i+1,s); 
+
+}
+
+int main() {
+  string s;
+  cout<< "Enter the string ";
+  cin>> s;
+ // getline(cin, s);  handles sentences with spaces
+  cout << "The new string is " << solve(0,s);
+  return 0;
+}
