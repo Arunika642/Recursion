@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+//int count =0;
+int solve(int i, string s) {
+  if(i == s.size()) { 
+    return 0;
+  }
+  // if(i < s.size())
+  //   count++;
+  // solve(i+1,s); 
+  // return count;
+  return 1 + solve(i+1,s);
+
+}
+
+int main() {
+  string s;
+  cout<< "Enter the string ";
+  getline(cin, s); // handles sentences with spaces
+  cout << "The new string is " << solve(0,s);
+  return 0;
+}
