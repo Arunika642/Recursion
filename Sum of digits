@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int solve(int n) {
+  if(n == 0) { 
+    return 0;
+  }
+
+  return abs(n%10) + solve(n/10); //abs to handle negative numbers
+                                  // -38 result = 11
+
+}
+
+int main() {
+  int n;
+  cin >> n;
+  cout << "Sum of digits is "<< solve(n);
+  return 0;
+}
