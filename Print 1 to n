@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int solve(int i, int n) {
+  if(i > n) { //base condition loops till 1 to n
+    return 0;
+  }
+  cout << i; //prints the number if condition is not met
+  solve(i + 1, n); //moves forward with next number
+}
+
+int main() {
+  int n;
+  cin >> n;
+  solve(1, n);
+  return 0;
+}
